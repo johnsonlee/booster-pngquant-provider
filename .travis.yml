@@ -11,7 +11,7 @@ cache:
 before_install:
 - openssl aes-256-cbc -K $encrypted_b09dbefd878c_key -iv $encrypted_b09dbefd878c_iv -in .travis/secring.gpg.enc -out .travis/secring.gpg -d
 install:
-- "./gradlew assemble -x signArchives -POSSRH_USERNAME=${OSSRH_USERNAME} -POSSRH_PASSWORD=${OSSRH_PASSWORD}"
+- "./gradlew assemble -POSSRH_USERNAME=${OSSRH_USERNAME} -POSSRH_PASSWORD=${OSSRH_PASSWORD}"
 before_script:
 - chmod +x gradlew
 script:
