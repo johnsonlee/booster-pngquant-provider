@@ -25,8 +25,8 @@ dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("com.google.auto.service:auto-service:1.0-rc4")
-    implementation("com.didiglobal.booster:booster-command:1.2.2")
-    implementation("com.didiglobal.booster:booster-kotlinx:1.2.2")
+    implementation("com.didiglobal.booster:booster-command:1.3.0")
+    implementation("com.didiglobal.booster:booster-kotlinx:1.3.0")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 }

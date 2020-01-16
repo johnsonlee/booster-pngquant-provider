@@ -33,4 +33,4 @@ internal val PREBULT_PNGQUANT_EXECUTABLE = "bin/" + when {
         else -> TODO("Unsupported architecture ${OS.arch}")
     }
     else -> TODO("Unsupported OS ${OS.name}")
-}
+} + "/pngquant"
