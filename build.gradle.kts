@@ -31,18 +31,6 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 }
 
-kapt {
-    correctErrorTypes = true
-
-    javacOptions {
-        option("SomeJavacOption", "OptionValue")
-    }
-
-    arguments {
-        arg("SomeKaptArgument", "ArgumentValue")
-    }
-}
-
 val sourcesJar by tasks.registering(Jar::class) {
     dependsOn(JavaPlugin.CLASSES_TASK_NAME)
     classifier = "sources"
