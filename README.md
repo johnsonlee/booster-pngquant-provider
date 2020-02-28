@@ -11,7 +11,7 @@ buildscript {
         classpath "com.didiglobal.booster:booster-gradle-plugin:$booster_version"
         ...
         classpath "com.didiglobal.booster:booster-task-compression-pngquant:$booster_version"
-        classpath "io.johnsonlee.booster:booster-pngqaunt-provider:1.0.0"
+        classpath "io.johnsonlee.booster:booster-pngqaunt-provider:1.1.0"
     }
     ...
 }
