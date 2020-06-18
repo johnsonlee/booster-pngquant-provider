@@ -7,7 +7,7 @@ This project is a plugin of [booster](https://github.com/didi/booster) to provid
 ```gradle
 buildscript {
     ext {
-        booster_version = "2.0.0"
+        booster_version = "2.1.0"
     }
     ...
     dependencies {
