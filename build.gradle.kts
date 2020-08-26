@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "io.johnsonlee.booster"
-version = "2.2.0"
+version = "2.3.0"
 
 
 repositories {
@@ -25,8 +25,8 @@ dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("com.google.auto.service:auto-service:1.0-rc4")
-    implementation("com.didiglobal.booster:booster-command:2.2.0")
-    implementation("com.didiglobal.booster:booster-kotlinx:2.2.0")
+    implementation("com.didiglobal.booster:booster-command:2.3.0")
+    implementation("com.didiglobal.booster:booster-kotlinx:2.3.0")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 }
