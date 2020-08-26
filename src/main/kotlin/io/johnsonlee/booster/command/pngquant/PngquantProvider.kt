@@ -14,10 +14,12 @@ import com.google.auto.service.AutoService
 class PngquantProvider : CommandProvider {
 
     override fun get(): Collection<Command> = listOf(
-            Command("pngquant${OS.executableSuffix}", javaClass.classLoader.getResource(PREBULT_PNGQUANT_EXECUTABLE)!!)
+            Command(PNGQUANT, javaClass.classLoader.getResource(PREBULT_PNGQUANT_EXECUTABLE)!!)
     )
 
 }
+
+internal val PNGQUANT = "pngquant${OS.executableSuffix}"
 
 internal val PREBULT_PNGQUANT_EXECUTABLE = "bin/" + when {
     OS.isLinux() -> "linux/" + when (OS.arch) {
@@ -33,4 +35,4 @@ internal val PREBULT_PNGQUANT_EXECUTABLE = "bin/" + when {
         else -> TODO("Unsupported architecture ${OS.arch}")
     }
     else -> TODO("Unsupported OS ${OS.name}")
-} + "/pngquant"
+} + "/${PNGQUANT}"
