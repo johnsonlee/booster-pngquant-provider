@@ -28,6 +28,7 @@ internal val PREBULT_PNGQUANT_EXECUTABLE = "bin/" + when {
     }
     OS.isMac() -> "macosx/" + when (OS.arch) {
         "x64", "x86_64", "amd64" -> "x64"
+        "aarch64" -> "aarch64"
         else -> TODO("Unsupported architecture ${OS.arch}")
     }
     OS.isWindows() -> "windows/" + when (OS.arch) {
