@@ -1,0 +1,34 @@
+name: Run unit tests
+
+on:
+  push:
+    branches: [ '*' ]
+  pull_request:
+    branches: [ '*' ]
+
+  repository_dispatch:
+    types: [test]
+
+jobs:
+  run-unit-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Java
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+
+    - name: build
+      run: ./gradlew check -S --no-daemon
+      env:
+        GPG_KEY_ARMOR: ${{ secrets.GPG_KEY_ARMOR }}
+        GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+        GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+        OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+        OSSRH_PACKAGE_GROUP: ${{ secrets.OSSRH_PACKAGE_GROUP }}

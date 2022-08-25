@@ -8,3 +8,10 @@
  */
 
 rootProject.name = "booster-pngquant-provider"
+
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
